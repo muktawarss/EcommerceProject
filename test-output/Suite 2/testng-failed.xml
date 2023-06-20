@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite 2]">
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.AnnotationTransformer"/>
+  </listeners>
+  <test name="Vendor Module">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.kisaan.vendor.testcases.TC_11_Vendor_WithdrawNow_Paypal"/>
+    </classes>
+  </test> <!-- Vendor Module -->
+  <test name="Vendor Module(failed)">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.kisaan.vendor.testcases.TC_11_Vendor_WithdrawNow_Paypal">
+        <methods>
+          <include name="classInstitiate"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="vendor_SignIn"/>
+          <include name="openReport"/>
+          <include name="checkResult"/>
+        </methods>
+      </class> <!-- com.kisaan.vendor.testcases.TC_11_Vendor_WithdrawNow_Paypal -->
+    </classes>
+  </test> <!-- Vendor Module(failed) -->
+</suite> <!-- Failed suite [Suite 2] -->
